@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .border{
+      width: 500px;
+      height: 500px;
+      border: 5px solid black;
+      margin: auto;
+      border-style: dashed;
+      background-color: beige;
+    }
+body {
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.head{
+  background-color: rgb(22, 88, 73);
+}
+.left_arm{
+  background-color:rgb(245, 18, 18);
+}
+.torso{
+  background-color: rgba(11, 128, 182, 0.737);
+}
+.right_arm{
+  background-color: rgb(255, 19, 19);
+}
+.left_leg,
+.right_leg {
+  background-color:rgb(244, 25, 1)
+}
+
+.head {
+  width: 150px;
+  margin: 0 auto;
+  height: 80px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+}
+
+.eyes {
+  position: relative;
+  top: 30px;
+
+}
+
+.left_eye,
+.right_eye {
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  background-color: rgb(60, 243, 124);
+  display: inline-block;
+
+}
+
+.left_eye {
+  margin-left: 30px;
+}
+
+.right_eye {
+  margin-left: 45px;
+}
+
+.upper_body {
+  width: 220px;
+  height: 140px;
+  margin: 10px auto;
+  display: flex;
+
+}
+
+.left_arm,
+.right_arm {
+  width: 40px;
+  height: 125px;
+  border-radius: 100px;
+  margin-top: 20px;
+}
+
+.left_arm {
+  margin: right 45px;
+}
+
+.left_arm {
+  margin-right: 12px;
+  
+}
+
+.right_arm {
+  margin-left: 10px;
+}
+
+.torso {
+  width: 200px;
+  height: 200px;
+  border-radius: 0 0 50px 50px;
+  transition: border-radius 1s;
+}
+
+.lower_body {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+
+}
+
+.left_leg,
+.right_leg {
+  width: 30px;
+  height: 150px;
+  border-radius: 0 0 100px 100px;
+  display: inline-block;
+}
+
+.left_leg {
+  margin-left: 55px;
+}
+
+.right_leg {
+  margin-left: 30px;
+}
+
+.robots:hover .head {
+  animation: movehead 3s infinite;
+}
+
+.robots:hover .torso {
+  border-radius: 40%;
+  animation: movetorso 2s infinite;
+}
+
+.robots:hover .left_arm {
+  animation: moveleftarm 2s infinite;
+}
+
+.robots:hover .right_arm {
+  animation: moverightarm 2s infinite;
+}
+
+.robots:hover .left_leg {
+  animation: moveleftleg 2s infinite;
+}
+
+.robots:hover .right_leg {
+  animation: moverightleg 2s infinite;
+}
+
+@keyframes movehead {
+  0% {
+    width: 200px;
+  }
+
+  25% {
+    width: 200px;
+  }
+
+  50% {
+    
+    width: 200px;
+  }
+
+  75% {
+    width: 150px;
+  }
+
+  100% {
+    width: 150px;
+  }
+}
+
+@keyframes moveleftarm {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+
+  25% {
+    transform: rotate(90deg);
+    transform-origin: top center;
+  }
+
+  50% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+
+  75% {
+    transform: rotate(90deg);
+    transform-origin: top center;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+}
+
+@keyframes moverightarm {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+
+  25% {
+    transform: rotate(-90deg);
+    transform-origin: top center;
+  }
+
+  50% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+
+  75% {
+    transform: rotate(-90deg);
+    transform-origin: top center;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+}
+
+@keyframes moveleftleg {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(20deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(20deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes moverightleg {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-20deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-20deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes movetorso {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+    
+  </style>
+  
+</head>
+
+<body>
+  <div class="border">
+  <h1>Dancing Robot </h1>
+  <div class="robots">
+    <div class="android">
+      <div class="head">
+        <div class="eyes">
+          <div class="left_eye"></div>
+          <div class="right_eye"></div>
+        </div>
+      </div>
+      <div class="upper_body">
+        <div class="left_arm"></div>
+        <div class="torso"></div>
+        <div class="right_arm"></div>
+      </div>
+      <div class="lower_body">
+        <div class="left_leg"></div>
+        <div class="right_leg"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
